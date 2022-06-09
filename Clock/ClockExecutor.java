@@ -1,22 +1,12 @@
 package com.Clock;
 
-public class ClockExecutor{
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+public class ClockExecutor  {
 
-  /*  ClockExecutor military1 = new MilitaryClock();
-    ClockExecutor normal = new NormalClock();
-    ClockExecutor exactTime = new ExactClock();
-    ClockExecutor japanTime = new JapanClock();
-    ClockExecutor twelveClock = new TwelveHourClock();
-    ClockExecutor twelveClockJapan = new TwelveHourJapanClock();
-    public void execute() {
-
-        military1.time();
-        normal.time();
-        exactTime.time();
-        twelveClock.time();
-        japanTime.time();
-        twelveClockJapan.time();*/
-
+    /*SimpleDateFormat displayFormat = new SimpleDateFormat("HH:mm");
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm a");
+    Date date = simpleDateFormat.parse("10:30 PM");*/
 
 }
