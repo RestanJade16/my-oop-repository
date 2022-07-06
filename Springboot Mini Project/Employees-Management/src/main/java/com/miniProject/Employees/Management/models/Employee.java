@@ -1,5 +1,6 @@
 package com.miniProject.Employees.Management.models;
 
+import com.miniProject.Employees.Management.enums.EmployeeStatus;
 import lombok.Getter;
 import lombok.Setter;
 

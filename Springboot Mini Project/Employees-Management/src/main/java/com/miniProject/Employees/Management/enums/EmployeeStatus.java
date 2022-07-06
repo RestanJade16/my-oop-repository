@@ -1,4 +1,4 @@
-package com.miniProject.Employees.Management.models;
+package com.miniProject.Employees.Management.enums;
 
 public enum EmployeeStatus {
     ACTIVE,
