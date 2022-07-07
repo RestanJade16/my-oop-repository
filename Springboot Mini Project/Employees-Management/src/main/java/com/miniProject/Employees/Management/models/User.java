@@ -1,5 +1,6 @@
 package com.miniProject.Employees.Management.models;
 
+import com.miniProject.Employees.Management.enums.UserRole;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,5 +22,12 @@ public class User {
 
     @Column
     private String password;
+
+    @Column
+    private String status;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
 
 }
