@@ -26,7 +26,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 				.frameOptions()
 				.disable()
 
-				//--------Endpoint configuration for ADMIN and USER access level----------
+				//--------Endpoint configuration for ADMIN and USER access ----------
 
 				.disable()
                 .authorizeRequests()

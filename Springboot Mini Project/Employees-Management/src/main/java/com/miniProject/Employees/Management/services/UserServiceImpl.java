@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -78,6 +79,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
        return userRepository.findById(id).map(updatedUserInfo ->{
            updatedUserInfo.setStatus(user.getStatus());
            updatedUserInfo.setRole(user.getRole());
+           updatedUserInfo.setLastModifiedDate(LocalDateTime.now()); // try if mag update if wala ung line
            return userRepository.save(updatedUserInfo);
        }).orElseThrow(() -> new RecordNotFoundException("User not found!"));
     }

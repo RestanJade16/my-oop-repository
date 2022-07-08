@@ -3,6 +3,7 @@ package com.miniProject.Employees.Management.models;
 import com.miniProject.Employees.Management.enums.UserRole;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
@@ -10,7 +11,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name = "user_object")
-public class User {
+@EntityListeners(AuditingEntityListener.class)
+public class User extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

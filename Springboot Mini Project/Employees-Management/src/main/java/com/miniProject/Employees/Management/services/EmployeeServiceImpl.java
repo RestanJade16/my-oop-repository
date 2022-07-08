@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -55,6 +56,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             updatedEmployee.setEmail(employee.getEmail());
             updatedEmployee.setCommunity(employee.getCommunity());
             updatedEmployee.setStatus(employee.getStatus());
+            updatedEmployee.setLastModifiedDate(LocalDateTime.now());
             return employeeRepository.save(updatedEmployee);
         }).orElseThrow(() -> new RecordNotFoundException("Employee not found!"));
     }

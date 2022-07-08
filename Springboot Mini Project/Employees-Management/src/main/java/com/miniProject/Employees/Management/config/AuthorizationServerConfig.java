@@ -46,6 +46,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	public void configure(ClientDetailsServiceConfigurer configured) throws Exception {
 
+		//--------------postman configuration --------------------
 		configured
 				.inMemory()
 				.withClient(USERNAME)
@@ -58,7 +59,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints.tokenStore(tokenStore())
+		endpoints
+				//----------postman endpoint config for oauth2------------------------
+
+				.pathMapping("/oauth/token","/login") //configure oauth2 endpoint to "/login"
+				.tokenStore(tokenStore())
 				.authenticationManager(authenticationManager)
 				.accessTokenConverter(accessTokenConverter());
 	}
